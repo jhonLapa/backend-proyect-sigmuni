@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Context\" />
+    <None Remove="Core\" />
+    <None Remove="ModelMaps\" />
+    <None Remove="Repositories\" />
+    <None Remove="Repositories\Admins\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.Relational" />
+    <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <None Remove="ModelMaps\Admins\" />
+    <None Remove="Core\Repositories\" />
+    <None Remove="Repositories\Admins\Abastractions\" />
+    <None Remove="Repositories\Admins\Implementations\" />
+    <None Remove="Core\Paginations\" />
+    <None Remove="Core\Paginations\Abstractions\" />
+    <None Remove="Core\Paginations\Implementations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Core\" />
+    <Folder Include="Core\Repositories\" />
+    <Folder Include="Core\Paginations\" />
+    <Folder Include="Core\Paginations\Abstractions\" />
+    <Folder Include="Core\Paginations\Implementations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jca.Sigmuni.Domain\Jca.Sigmuni.Domain.csproj" />
+    <ProjectReference Include="..\Jca.Sigmuni.Core\Jca.Sigmuni.Core.csproj" />
+    <ProjectReference Include="..\Jca.Sigmuni.Util\Jca.Sigmuni.Util.csproj" />
+  </ItemGroup>
+</Project>

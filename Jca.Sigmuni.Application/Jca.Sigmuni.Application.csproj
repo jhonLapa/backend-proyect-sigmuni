@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Core\" />
+    <None Remove="Dtos\" />
+    <None Remove="Services\" />
+    <None Remove="Core\Services\" />
+    <None Remove="Dtos\Admins\" />
+    <None Remove="Dtos\Admins\Roles\" />
+    <None Remove="Dtos\Admins\Roles\Maps\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Services\Admins\" />
+    <None Remove="Services\Admins\Abstractions\" />
+    <None Remove="Services\Admins\Inplementations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Core\Services\" />
+    <Folder Include="Dtos\Admins\Roles\" />
+    <Folder Include="Dtos\Admins\Roles\Maps\" />
+    <Folder Include="Dtos\TramiteDocumentario\Inspectors\Maps\" />
+    <Folder Include="Dtos\TramiteDocumentario\ProductoCartos\Maps\" />
+    <Folder Include="Dtos\TramiteDocumentario\ReintegroSolicitudes\Maps\" />
+    <Folder Include="Dtos\TramiteDocumentario\SolicitudNotificaciones\Maps\" />
+    <Folder Include="Dtos\TramiteDocumentario\SupervisorInsps\Maps\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jca.Sigmuni.Core\Jca.Sigmuni.Core.csproj" />
+    <ProjectReference Include="..\Jca.Sigmuni.Domain\Jca.Sigmuni.Domain.csproj" />
+    <ProjectReference Include="..\Jca.Sigmuni.Infraestructure\Jca.Sigmuni.Infraestructure.csproj" />
+    <ProjectReference Include="..\Jca.Sigmuni.Util\Jca.Sigmuni.Util.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+</Project>
